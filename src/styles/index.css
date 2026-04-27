@@ -1,11 +1,39 @@
-/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-*/
+.traffic-light {
+    background-color: #2a2a2a;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 3px solid #444;
+}
+
+.light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.red    { background-color: #4a0000; }
+.yellow { background-color: #4a3d00; }
+.green  { background-color: #004a00; }
+
+.red.active    { background-color: #ff0000; box-shadow: 0 0 20px #ff0000, 0 0 40px #ff000088, 0 0 10px white; }
+.yellow.active { background-color: #ffd700; box-shadow: 0 0 20px #ffd700, 0 0 40px #ffd70088, 0 0 10px white; }
+.green.active  { background-color: #00ff00; box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff0088, 0 0 10px white; }
